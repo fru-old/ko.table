@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
+<title>ko.table</title>
+<link rel="stylesheet" href="./ko.table.css" />
+</head>
+<body>
+ 
+<table data-bind="table: grid">
+<thead>
+<tr><th>Text</th></tr>
+</thead>
+<tbody>
+	<tr data-bind="css: stripe">
+		<td data-bind="text: text"></td>
+	</tr>
+</tbody>
+</table>
+
+<script src="./ko.3.2.0.latest.js"></script>
+<script src="./ko.table.js"></script>
+<script>
+var ViewModel = function() {
+	this.grid = {
+		ajax: function(page, pagesize) {
+			return {
+				then: function(callback){
+					var result = [];
+					for(var i = 0; i < pagesize; i++){
+						result[i] = {text: "Text"+(page*pagesize + i)};
+					}
+					callback(result);
+				}
+			}
+		},
+		size: ko.observable(400)
+	}
+};
+
+ko.applyBindings(new ViewModel());
+</script>
+</body>
+</html>

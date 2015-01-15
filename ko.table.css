@@ -1,0 +1,199 @@
+table {
+  border-color: #C5C5C5;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,
+th {
+  border-color: #C5C5C5;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #2e2e2e;
+  padding: 6px 8px;
+  overflow: hidden;
+}
+.ko-table .ko-table-body {
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.ko-table .ko-table-body > table {
+  border-top: none;
+}
+.ko-table .ko-table-body > table > tbody > tr.even {
+  background-color: #f5f5f5;
+}
+.ko-table .ko-table-body > table > tbody > tr {
+  background-color: white;
+}
+.ko-table .ko-table-body > table > tbody > tr > td {
+  border-bottom: none;
+}
+.ko-table .ko-table-head {
+  overflow: hidden;
+  border-right: 1px solid #C5C5C5;
+}
+.ko-table .ko-table-head > table {
+  border-right: none;
+  position: relative;
+}
+.ko-table .ko-table-head > table > thead > tr {
+  background: #F3F3F3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(100%, #e3e3e3));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f3f3f3 0%, #e3e3e3 100%);
+  /* W3C */
+}
+.ko-table > .ko-table-head > table,
+.ko-table > .ko-table-body > table {
+  table-layout: fixed;
+}
+.ko-table > .ko-table-head > table > thead > tr > td,
+.ko-table > .ko-table-body > table > thead > tr > td,
+.ko-table > .ko-table-head > table > tbody > tr > td,
+.ko-table > .ko-table-body > table > tbody > tr > td,
+.ko-table > .ko-table-head > table > thead > tr > th,
+.ko-table > .ko-table-body > table > thead > tr > th,
+.ko-table > .ko-table-head > table > tbody > tr > th,
+.ko-table > .ko-table-body > table > tbody > tr > th {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ko-table-head {
+  position: relative;
+}
+.ko-table-head .ko-table-corner {
+  background: #F3F3F3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(100%, #e3e3e3));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f3f3f3 0%, #e3e3e3 100%);
+  /* W3C */
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #C5C5C5;
+  border-top: 1px solid #C5C5C5;
+  border-bottom: 1px solid #C5C5C5;
+}
+.ko-table-paging {
+  background: #F3F3F3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3f3f3), color-stop(100%, #e3e3e3));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f3f3f3 0%, #e3e3e3 100%);
+  /* W3C */
+  border: 1px solid #C5C5C5;
+  font-size: 14px;
+}
+.ko-table-paging .info {
+  float: right;
+  padding: 12px;
+}
+.ko-table-paging .last-right {
+  margin-left: 2px;
+}
+.ko-table-paging .last-left {
+  margin-right: 2px;
+}
+.ko-table-paging .next-right {
+  margin-left: 2px;
+}
+.ko-table-paging .next-left {
+  margin-right: 2px;
+}
+.ko-table-paging .paging {
+  font-size: 0;
+  margin: 5px 5px 3px 5px;
+  display: inline-block;
+  line-height: 21px;
+}
+.ko-table-paging .paging span {
+  color: #565656;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  cursor: pointer;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #C5C5C5;
+  background-color: transparent;
+}
+.ko-table-paging .paging span:hover {
+  border: 1px solid #999999;
+  background-color: #BCB4B0;
+}
+.ko-table-paging .paging span.page,
+.ko-table-paging .paging span.more {
+  border: 1px solid transparent;
+  color: #2e2e2e;
+}
+.ko-table-paging .paging span.page:hover,
+.ko-table-paging .paging span.more:hover {
+  border: 1px solid #999999;
+  background-color: #BCB4B0;
+}
+.ko-table-paging .paging span.active {
+  border: 1px solid #ee5315;
+  background-color: #ee5315;
+  margin: 0 1px;
+  color: white;
+  cursor: default;
+}
+.ko-table-paging .paging span.active:hover {
+  border: 1px solid #ee5315;
+  background-color: #ee5315;
+  color: white;
+}
+.ko-table-paging .paging span.deactive {
+  color: #C5C5C5;
+  cursor: default;
+  border-color: #D5D5D5;
+}
+.ko-table-paging .paging span.deactive:hover {
+  border-color: #D5D5D5;
+  background-color: transparent;
+}
+.ko-table-paging .paging .next-left + .active {
+  margin-left: 0 !important;
+}
+.ko-table-paging .paging .active + .next-right {
+  margin-left: 1px !important;
+}

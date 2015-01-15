@@ -1,0 +1,202 @@
+
+.table-header-gray-gradient () {
+    background: #F3F3F3; /* Old browsers */
+    background: -moz-linear-gradient(top, #F3F3F3 0%, #E3E3E3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3F3F3), color-stop(100%,#E3E3E3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F3F3F3 0%,#E3E3E3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F3F3F3 0%,#E3E3E3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F3F3F3 0%,#E3E3E3 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #F3F3F3 0%,#E3E3E3 100%); /* W3C */
+}
+
+table {
+    border-color: #C5C5C5;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td, th {
+    border-color: #C5C5C5;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(46,46,46);
+    padding: 6px 8px;
+    overflow: hidden;
+}
+
+.ko-table {
+    .ko-table-body {
+        overflow-y: scroll;
+        max-height: 500px;
+        > table {
+            border-top: none;
+            > tbody > tr.even {
+                background-color: rgb(245,245,245);
+            }
+            > tbody > tr {
+                background-color: white;
+                > td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    .ko-table-head {
+        overflow: hidden;
+        border-right: 1px solid #C5C5C5;
+        > table {
+            border-right: none;
+            position: relative;
+            > thead > tr {
+                .table-header-gray-gradient();
+            }
+        }
+    }
+
+    > .ko-table-head > table, > .ko-table-body > table {
+        table-layout: fixed;
+        > thead , > tbody {
+            > tr > td, > tr > th {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.ko-table-head {
+    position: relative;
+    .ko-table-corner {
+        .table-header-gray-gradient ();
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-left: 1px solid #C5C5C5;
+        border-top: 1px solid #C5C5C5;
+        border-bottom: 1px solid #C5C5C5;
+    }
+}
+
+.ko-table-paging {
+    .table-header-gray-gradient();
+    border: 1px solid #C5C5C5;
+    font-size: 14px;
+
+    .info {
+        float: right;
+        padding: 12px;
+    }
+
+    .last-right {
+        //&:after { 
+        //    .fa;
+        //    content: @fa-var-angle-double-right;
+        //}
+        margin-left: 2px;
+    }
+
+    .last-left {
+        //&:after { 
+        //    .fa;
+        //    content: @fa-var-angle-double-left;
+        //}
+        margin-right: 2px;
+    }
+
+    .next-right {
+        //&:after { 
+        //    .fa;
+        //    content: @fa-var-angle-right;
+        //}
+        margin-left: 2px;
+    }
+
+    .next-left {
+        //&:after { 
+        //  .fa;
+        //  content: @fa-var-angle-left;
+        //}
+        margin-right: 2px;
+        
+    }
+
+    .paging {
+        font-size: 0;
+        margin: 5px 5px 3px 5px;
+        display: inline-block;
+        line-height: 21px;
+        span {
+            color: rgb(86,86,86);;
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            padding-top: 4px;
+            cursor: pointer;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 15px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #C5C5C5;
+            background-color: transparent;
+
+            &:hover {
+                border: 1px solid #999999;
+                background-color: #BCB4B0;
+            }
+        }
+
+        span.page, span.more {
+            border: 1px solid transparent;
+            color: rgb(46,46,46);
+
+            &:hover {
+                border: 1px solid #999999;
+                background-color: #BCB4B0;
+            }
+        }
+
+        span.active {
+            border: 1px solid #ee5315;
+            background-color: #ee5315;
+            margin: 0 1px;
+            color: white;
+            cursor: default;
+            
+            &:hover {
+                border: 1px solid #ee5315;
+                background-color: #ee5315;
+                color: white;
+            }
+        }
+
+        span.deactive {
+            color: #C5C5C5;
+            cursor: default;
+            border-color: #D5D5D5;
+
+            &:hover {
+                border-color: #D5D5D5;
+                background-color: transparent;
+            }
+        }
+
+        .next-left + .active {
+            margin-left: 0 !important;
+        }
+
+        .active + .next-right {
+            margin-left: 1px !important;
+        }
+    }
+}
