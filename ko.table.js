@@ -188,6 +188,12 @@
 			ko.utils.toggleDomNodeCssClass(last, ko['table']['containerClasses']['foot'], true);
 		}
 
+		// Scroll event
+
+		ko.utils.registerEventHandler(bodyDiv, 'scroll', function(event){
+			head.parentNode.style['left'] = -bodyDiv.scrollLeft + 'px';
+		});	
+
 		// paging controlls
 
 		var pagination = document.createElement('div')
