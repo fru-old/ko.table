@@ -1,0 +1,40 @@
+<style>
+	.multi-select {
+		font-size: 0;
+	}
+	.multi-select span {
+		font-size: 14px;
+		line-height: 14px;
+		padding: 2px;
+		background-color: red;
+	}
+	.multi-select [contenteditable="true"] {
+		min-width: 5px;
+		display: inline-block;
+		outline: 0;
+		background-color: transparent;
+	}
+
+
+	* {
+	    -webkit-user-select: none;
+	    user-select: none;
+	}
+
+	[contenteditable] {
+	    -webkit-user-select: text;
+	    user-select: text;
+	}
+</style>
+
+
+<div class="multi-select">
+	<span>Test</span>
+	<span contenteditable="true"></span>
+	<span>Test2</span>
+	<span contenteditable="true"></span>
+	<span>Test3</span>
+	<span contenteditable="true"></span>
+	<span>Test4</span>
+	<span contenteditable="true">Test</span>
+</div>
